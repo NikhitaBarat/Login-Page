@@ -2,25 +2,34 @@ import React from "react"
 
 function Login() {
     return (
-        <div>
-            <h1>Login page.</h1>
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                    <small id="emailHelp" class ="form-text text-muted">We'll never share your email with anyone else.</small>
+        <form >
+            <h3>Sign In</h3>
+
+            <div class="form-group">
+            <label>Enter Username</label>
+                <textarea class="text" className = "form-control" rows="1" placeholder = "Enter username"></textarea>
+            </div>
+
+            <div className="form-group">
+                <label>Password</label>
+                <input type="password" className="form-control" placeholder="Enter password" />
+            </div>
+
+            <div className="form-group">
+                <div className="custom-control custom-checkbox">
+                    <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                    <label className="custom-control-label" htmlFor="customCheck1">Agree to terms and conditions</label>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                    <label class ="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+            </div>
+          
+            <p className="forgot-password text-justify">
+                <a class="nav-link" href="/Profile">Take me to the profile page.</a>
+            </p>
+            <button type="submit" className="btn btn-primary btn-block">Log in</button>
+            <p className="forgot-password text-right">
+                <a href="#">Forgot password?</a>
+            </p>
+        </form>
     );
 }
 
